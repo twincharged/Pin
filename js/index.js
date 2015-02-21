@@ -90,7 +90,7 @@ select("#sign-out").addEventListener("click", function(e){
 
 select("#send").addEventListener("click", function(e){
   e.preventDefault()
-  
+
   var title = select("#title"),
       blog  = select("#blog")
 

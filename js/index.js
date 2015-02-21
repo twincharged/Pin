@@ -13,8 +13,8 @@ function sign(){
       uname = ls.get("username"),
       rname = ls.get("repo");
 
-  gh    = new Github({username: uname, password: pword, auth: "basic"}),
-  repo  = gh.getRepo(uname, rname)
+  gh   = new Github({username: uname, password: pword, auth: "basic"}),
+  repo = gh.getRepo(uname, rname)
   select("#account").innerHTML         = "@"+uname
   select("#expanding").className       = "col-md-6"
   select("#contracting").style.display = "block"

@@ -11,10 +11,10 @@ function sign(){
   select("#blog-container").style.display = "block";
   var pword = ls.get("password"),
       uname = ls.get("username"),
-      urepo = ls.get("repo");
+      rname = ls.get("repo");
 
   gh    = new Github({username: uname, password: pword, auth: "basic"}),
-  repo  = gh.getRepo(uname, urepo)
+  repo  = gh.getRepo(uname, rname)
   select("#account").innerHTML = "@"+uname
   select("#expanding").className = "col-md-6"
   select("#contracting").style.display = "block"
@@ -64,19 +64,19 @@ function showBlogs(){
 select("#sign-in").addEventListener("click", function(){
   var uname = select("#username"),
       pword = select("#password"),
-      urepo = select("#repo")
+      rname = select("#repo")
 
 
   ls.set("username", uname.value)
   ls.set("password", pword.value)
-  ls.set("repo",     urepo.value)
+  ls.set("repo",     rname.value)
 
 
   alert("Welcome, "+uname.value+"!")
 
   uname.value = null
   pword.value = null
-  urepo.value = null
+  rname.value = null
 
   sign()
 })

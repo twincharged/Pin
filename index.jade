@@ -18,7 +18,8 @@ include base
         form
           h2 New Blog
           input#title(placeholder="Title" spellcheck="false" type="text")
-          textarea#blog(placeholder="Body" spellcheck="false" type="text")
+          #blog.editable(spellcheck="false" type="text")
+            p Body
           button#send Post
   #blog-container.container
     hr

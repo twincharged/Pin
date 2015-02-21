@@ -48,13 +48,13 @@ function appendBlog(title, text) {
 
 function showBlogs(){
   // This is failing. IDK why.
-  repo.contents("gh-pages", "markdown/", function(err, contents) {
-    console.dir(err, contents)
+  // repo.contents("gh-pages", "markdown/", function(err, contents) {
+    // console.dir(err, contents)
     // for (var i=0;i<contents.length;i++) {
     //   var blog = contents[i]
     //   appendBlog(blog.name, blog.content)
     // }
-  });
+  // });
 }
 
 
@@ -91,9 +91,7 @@ select("#send").addEventListener("click", function(){
   if (!gh && !repo) return alert("Need to sign in first!")
 
   // Need to auto increment instead of title
-  repo.write("gh-pages", "markdown/"+title.value+".md", blog.value, title.value+" post.", function(err) {
-    console.log(err)
-  });
+  repo.write("gh-pages", "markdown/"+title.value+".md", blog.value, title.value+" post.", console.log)
 
   appendBlog(title.value, blog.value)
   alert("Thanks for blogging!")

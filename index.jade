@@ -1,0 +1,28 @@
+include base
++base("Pin")
+  .container
+    h1 GitHub Blogging
+    .row
+      #expanding.col-md-12
+        #signed
+          form
+            h2 Sign
+            input#username(placeholder="Username" spellcheck="false" type="text")
+            input#password(placeholder="Password" spellcheck="false" type="password")
+            input#repo(placeholder="Repository" spellcheck="false" type="text")
+            button#sign-in Sign
+        #unsigned
+          h2#account
+          button#sign-out Unsign
+      #contracting.col-md-6
+        form
+          h2 New Blog
+          input#title(placeholder="Title" spellcheck="false" type="text")
+          textarea#blog(placeholder="Body" spellcheck="false" type="text")
+          button#send Post
+  #blog-container.container
+    hr
+    .row
+      .col-md-12
+        h1 Your Blogs:
+    #blogs.row

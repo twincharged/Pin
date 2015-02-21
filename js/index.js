@@ -15,8 +15,8 @@ function sign(){
 
   gh    = new Github({username: uname, password: pword, auth: "basic"}),
   repo  = gh.getRepo(uname, rname)
-  select("#account").innerHTML = "@"+uname
-  select("#expanding").className = "col-md-6"
+  select("#account").innerHTML         = "@"+uname
+  select("#expanding").className       = "col-md-6"
   select("#contracting").style.display = "block"
   showBlogs()
 }
@@ -25,7 +25,7 @@ function unsign(){
   ls.set("username", null)
   ls.set("password", null)
   ls.set("repo",     null)
-  select("#expanding").className = "col-md-12"
+  select("#expanding").className          = "col-md-12"
   select("#contracting").style.display    = "none"
   select("#account").innerHTML            = null
   select("#signed").style.display         = "block";

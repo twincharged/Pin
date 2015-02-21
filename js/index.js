@@ -42,7 +42,7 @@ function unsign(){
 
 
 
-function newBlog(title) {return "<div class='col-md-3'><a href='html/"+title+".html'>"+title+"</a></div>"}
+function newBlog(title) {return "<div class='col-md-3'><a href='./html/"+title+".html'>"+title+"</a></div>"}
 
 function appendBlog(title) {
   var blogs = select("#blogs")

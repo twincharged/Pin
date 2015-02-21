@@ -51,7 +51,7 @@ function showBlogs(){
   repo.contents("gh-pages", "markdown/", function(err, contents) {
     console.dir(err, contents)
     // for (var i=0;i<contents.length;i++) {
-    //   var blog  = contents[i]
+    //   var blog = contents[i]
     //   appendBlog(blog.name, blog.content)
     // }
   });

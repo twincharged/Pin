@@ -51,6 +51,7 @@ function appendBlog(title) {
 
 function showBlogs(){
   repo.contents("gh-pages", "html/", function(err, contents) {
+    console.log(err, contents)
     for (var i=0;i<contents.length;i++) {
       var blog = contents[i]
       appendBlog(blog.name.slice(0,-5))

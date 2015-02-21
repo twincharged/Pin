@@ -66,11 +66,9 @@ select("#sign-in").addEventListener("click", function(){
       pword = select("#password"),
       rname = select("#repo")
 
-
   ls.set("username", uname.value)
   ls.set("password", pword.value)
   ls.set("repo",     rname.value)
-
 
   alert("Welcome, "+uname.value+"!")
 
@@ -93,7 +91,6 @@ select("#send").addEventListener("click", function(){
   if (!gh && !repo) return alert("Need to sign in first!")
 
   // Need to auto increment instead of title
-
   repo.write("gh-pages", "markdown/"+title.value+".md", blog.value, title.value+" post.", function(err) {
     console.log(err)
   });

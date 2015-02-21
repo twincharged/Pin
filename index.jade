@@ -16,9 +16,10 @@ include base
           button#sign-out Unsign
       #contracting.col-md-6
         h2 New Blog
-        input#title(placeholder="Title" spellcheck="false" type="text")
-        textarea#blog(placeholder="Body" spellcheck="false" type="text")
-        button#send Post
+        form
+          input#title(placeholder="Title" spellcheck="false" type="text")
+          textarea#blog(placeholder="Body" spellcheck="false" type="text")
+          button#send Post
   #blog-container.container
     hr
     .row
